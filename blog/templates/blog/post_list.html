@@ -1,5 +1,18 @@
 <html>
-    <p>Hi there!</p>
-    <p>It works!</p>
-    <p>It works!</p>
+<head>
+    <title>wk Blog</title>
+</head>
+<body>
+    <div>
+        <h1><a href="/">wk django blog</a></h1>
+    </div>
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+    {% endfor %}
+</body>
+
 </html>
